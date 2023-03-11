@@ -1,0 +1,15 @@
+version: "3"
+services:
+  browserless:
+    image: browserless/chrome:latest
+    container_name: browserless
+    restart: always
+    environment:
+      #TOKEN: "2cbc5771-38f2-4dcf-8774-50ad51a971b8"
+      ENABLE_DEBUGGER: false
+      MAX_CONCURRENT_SESSIONS: 10
+      KEEP_ALIVE: true
+      CONNECTION_TIMEOUT: 1800000
+      PREBOOT_CHROME: true
+    ports:
+      - "3000:3000"
